@@ -1,0 +1,7 @@
+{
+  "name": "FOA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
