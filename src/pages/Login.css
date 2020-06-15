@@ -35,20 +35,83 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-top: 0.7em;
+  margin-top: 2em;
   margin-right: auto;
   margin-left: auto;
   width: 80%;
 }
 
-.logo {
+.logo_container {
+  position: relative;
+  height: 225px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 2em;
+  width: 100%;
+}
+
+.inner_ellipsis {
+  position: absolute;
+  top: 25px;
+  left: 35%;
+
   height: 150px;
   width: auto;
 }
 
+.outer_ellipsis {
+  position: absolute;
+  height: 200px;
+  width: auto;
+  top: 0;
+  left: 35%;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .inner_ellipsis {
+    left: 32%;
+  }
+
+  .outer_ellipsis {
+    left: 32%;
+  }
+}
+
+@media only screen and (max-width: 1112px) {
+  .inner_ellipsis {
+    left: 31%;
+  }
+
+  .outer_ellipsis {
+    left: 31%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .inner_ellipsis {
+    left: 30%;
+  }
+
+  .outer_ellipsis {
+    left: 30%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .form {
-    margin-top: 25%;
+    margin-top: 10%;
     width: 90%;
   }
 
@@ -67,5 +130,60 @@
     font-size: 14px;
     margin-bottom: 0.4em;
     width: 75%;
+  }
+
+  .inner_ellipsis {
+    left: 27%;
+  }
+
+  .outer_ellipsis {
+    left: 27%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .inner_ellipsis {
+    left: 15%;
+  }
+
+  .outer_ellipsis {
+    left: 15%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .inner_ellipsis {
+    left: 13%;
+  }
+
+  .outer_ellipsis {
+    left: 13%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .logo_container {
+    height: 150px;
+  }
+
+  .inner_ellipsis {
+    height: 90px;
+    top: 18px;
+    left: 7%;
+  }
+
+  .outer_ellipsis {
+    height: 125px;
+    left: 7%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .inner_ellipsis {
+    left: 39%;
+  }
+
+  .outer_ellipsis {
+    left: 39%;
   }
 }

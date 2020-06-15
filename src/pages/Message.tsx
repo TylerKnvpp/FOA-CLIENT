@@ -8,12 +8,13 @@ import {
   IonToolbar,
 } from "@ionic/react";
 
-interface MessageInterface {
-  username: String;
-  message: String;
+interface MessageProps {
+  // username: String;
+  // message: String;
+  history: any;
 }
 
-const Message: React.FC = () => {
+const Message: React.FC<MessageProps> = ({ history }) => {
   let message: any = {
     id: "1",
     username: "Tyler",

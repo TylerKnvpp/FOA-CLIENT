@@ -1,0 +1,78 @@
+.avatar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  height: 150px;
+  width: 150px;
+}
+
+.edit-pic {
+  color: #3880ff;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.logo-container {
+  position: relative;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 2em;
+  width: 100%;
+}
+
+.inner-ellipsis {
+  position: absolute;
+  top: 218px;
+  left: 40%;
+  height: 90px;
+  width: auto;
+}
+
+.outer-ellipsis {
+  position: absolute;
+  height: 125px;
+  width: auto;
+  top: 200px;
+  left: 40%;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .avatar {
+    margin-top: 1.5em;
+    height: 75px;
+    width: 75px;
+  }
+
+  .logo-container {
+    height: 200px;
+  }
+
+  .inner-ellipsis {
+    top: 218px;
+    left: 17%;
+    height: 90px;
+    width: auto;
+  }
+
+  .outer-ellipsis {
+    height: 125px;
+    width: auto;
+    top: 200px;
+    left: 17%;
+  }
+}
