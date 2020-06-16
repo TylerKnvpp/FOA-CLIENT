@@ -11,7 +11,7 @@ import {
   IonRouterLink,
   IonImg,
 } from "@ionic/react";
-import { Redirect } from "react-router-dom";
+
 const inner_ellipsis =
   "https://images.ctfassets.net/0jkr5d02o14t/krUFgCJtyCytEk5Z5vVNa/04657b426176e7c788a8da19ca8922e0/inner_ellipsis.png?h=250";
 const outer_ellipsis =

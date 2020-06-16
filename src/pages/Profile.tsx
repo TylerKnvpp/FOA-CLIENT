@@ -36,7 +36,7 @@ const Tab1: React.FC<ProfileProps> = ({ history }) => {
   }, [uidState]);
 
   useEffect(() => {
-    if (uidState) {
+    if (uidState && !userData) {
       fetchUserData(uidState)
         .then((res) => {
           if (res.success && !userData) console.log(res.user);
@@ -64,22 +64,23 @@ const Tab1: React.FC<ProfileProps> = ({ history }) => {
           <IonTitle>Profile</IonTitle>
         </IonToolbar>
       </IonHeader>
-
+      <IonHeader collapse="condense">
+        <IonToolbar>
+          <IonTitle size="large">Profile</IonTitle>
+          <IonButtons slot="end">
+            <IonButton>
+              <IonText onClick={handleLogout}>Logout</IonText>
+            </IonButton>
+          </IonButtons>
+        </IonToolbar>
+      </IonHeader>
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Profile</IonTitle>
-            <IonButtons slot="end">
-              <IonButton>
-                <IonText onClick={handleLogout}>Logout</IonText>
-              </IonButton>
-            </IonButtons>
-          </IonToolbar>
-        </IonHeader>
-
         {/* Avatar */}
         {userData ? (
-          <Avatar imageURL={`${userData.profilePicture}`} />
+          <Avatar
+            imageURL={`${userData.profilePicture}`}
+            userID={userData._id}
+          />
         ) : (
           <div className="logo-container">
             <IonImg src={inner_ellipsis} className="inner-ellipsis" />

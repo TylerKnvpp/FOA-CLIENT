@@ -35,7 +35,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ history }) => {
 
     console.log(formData);
 
-    const { isValid, error, field } = SignUpValidation(formData);
+    const { isValid, error } = SignUpValidation(formData);
 
     if (error) alert(error);
 
