@@ -23,7 +23,6 @@ const Avatar: React.FC<AvatarProps> = ({ imageURL, userID }) => {
   }
 
   const handleFileUpload = async (file: any) => {
-    console.log(file);
     const imageData = new FormData();
     imageData.append("image", file);
 
@@ -53,26 +52,26 @@ const Avatar: React.FC<AvatarProps> = ({ imageURL, userID }) => {
       <IonAvatar className="avatar">
         <img src={`${url}`} alt="avatar" />
       </IonAvatar>
-      <IonText>
-        <form className="image-upload-container">
-          {changeProfilePicture ? (
-            <input
-              name="profilePicture"
-              type="file"
-              accept="image/png, image/jpeg"
-              onChange={(e: any) => {
-                handleFileUpload(e.target.files ? e.target.files[0] : url);
-              }}
-            />
-          ) : null}
+      <form className="image-upload-container">
+        {changeProfilePicture ? (
+          <input
+            name="profilePicture"
+            type="file"
+            accept="image/png, image/jpeg"
+            onChange={(e: any) => {
+              handleFileUpload(e.target.files ? e.target.files[0] : url);
+            }}
+          />
+        ) : null}
+        <IonText>
           <h5
             className="edit-pic"
             onClick={() => setChangeProfilePicture(!changeProfilePicture)}
           >
             Change Profile Picture
           </h5>
-        </form>
-      </IonText>
+        </IonText>
+      </form>
     </div>
   );
 };

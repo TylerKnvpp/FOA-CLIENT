@@ -78,7 +78,8 @@ const Tab1: React.FC<ProfileProps> = ({ history }) => {
         {/* Avatar */}
         {userData ? (
           <Avatar
-            imageURL={`${userData.profilePicture}`}
+            // imageURL={`${userData.profilePicture}`}
+            imageURL=""
             userID={userData._id}
           />
         ) : (
