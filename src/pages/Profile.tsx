@@ -15,6 +15,7 @@ import { fetchUserData } from "../hooks/fetchUserProfile";
 import "./Profile.css";
 
 import Avatar from "../components/Avatar";
+import ProfileForm from "../components/ProfileForm";
 
 interface ProfileProps {
   history: any;
@@ -24,6 +25,7 @@ const Tab1: React.FC<ProfileProps> = ({ history }) => {
   const [uidState, setUID] = useState<string>("");
   const [userData, setUserData] = useState<any>();
   const [errorState, setErrorState] = useState<any>();
+  const [editState, toggleEditState] = useState<boolean>(false);
 
   const inner_ellipsis =
     "https://images.ctfassets.net/0jkr5d02o14t/krUFgCJtyCytEk5Z5vVNa/04657b426176e7c788a8da19ca8922e0/inner_ellipsis.png?h=250";
@@ -57,6 +59,12 @@ const Tab1: React.FC<ProfileProps> = ({ history }) => {
     history.push("/login");
   };
 
+  const handleEditState = () => {
+    toggleEditState(!editState);
+  };
+
+  if (errorState) console.log(errorState);
+
   return (
     <IonPage>
       <IonHeader>
@@ -77,11 +85,18 @@ const Tab1: React.FC<ProfileProps> = ({ history }) => {
       <IonContent>
         {/* Avatar */}
         {userData ? (
-          <Avatar
-            // imageURL={`${userData.profilePicture}`}
-            imageURL=""
-            userID={userData._id}
-          />
+          <>
+            <Avatar
+              editState={editState}
+              imageURL={`${userData.profilePicture}`}
+              userID={userData._id}
+            />
+            <ProfileForm
+              editState={editState}
+              userData={userData}
+              handleEditState={handleEditState}
+            />
+          </>
         ) : (
           <div className="logo-container">
             <IonImg src={inner_ellipsis} className="inner-ellipsis" />

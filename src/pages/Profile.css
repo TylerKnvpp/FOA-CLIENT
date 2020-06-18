@@ -50,6 +50,87 @@
   animation: App-logo-spin infinite 20s linear;
 }
 
+.form-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.save-button {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  margin-left: 30%;
+  margin-right: 25%;
+  width: 40%;
+}
+
+.modal-card {
+  margin: auto auto auto auto;
+  margin-top: 20em;
+
+  text-align: center;
+  height: 50%;
+  width: 100%;
+}
+
+.modal-header {
+  margin-bottom: 7em;
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.modal-title {
+  font-size: 1em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+  margin-top: 2em;
+  width: 60%;
+}
+
+.modal-button {
+  width: 30%;
+  margin-bottom: 5em;
+}
+
+.input {
+  background-color: none;
+  width: 100%;
+  border: none;
+}
+
+ion-icon {
+  --ionicon-stroke-width: 16px;
+}
+
+.warning {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 72px;
+}
+
+.edit-button {
+  border-radius: 10px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  margin-left: 30%;
+  margin-right: 25%;
+  width: 40%;
+}
+
+.modal-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -60,6 +141,16 @@
 }
 
 @media only screen and (max-width: 414px) {
+  .form-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  /* .modal-button {
+    margin-left: 39%;
+  } */
+
   .avatar {
     margin-top: 1.5em;
     height: 75px;

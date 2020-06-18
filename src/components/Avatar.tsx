@@ -4,9 +4,10 @@ import { IonText, IonAvatar } from "@ionic/react";
 interface AvatarProps {
   imageURL: string;
   userID: string;
+  editState: boolean;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ imageURL, userID }) => {
+const Avatar: React.FC<AvatarProps> = ({ imageURL, userID, editState }) => {
   const [url, setURL] = useState<any>(
     "https://images.ctfassets.net/0jkr5d02o14t/4Tsq7upvRUHBdW4HwzeNEy/7f140b351543035dae54015d634c0df4/placeholder.png?h=250"
   );
@@ -64,12 +65,14 @@ const Avatar: React.FC<AvatarProps> = ({ imageURL, userID }) => {
           />
         ) : null}
         <IonText>
-          <h5
-            className="edit-pic"
-            onClick={() => setChangeProfilePicture(!changeProfilePicture)}
-          >
-            Change Profile Picture
-          </h5>
+          {editState ? (
+            <h5
+              className="edit-pic"
+              onClick={() => setChangeProfilePicture(!changeProfilePicture)}
+            >
+              Change Profile Picture
+            </h5>
+          ) : null}
         </IonText>
       </form>
     </div>
