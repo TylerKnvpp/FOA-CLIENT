@@ -12,11 +12,8 @@ import {
   IonImg,
 } from "@ionic/react";
 
-const inner_ellipsis =
-  "https://images.ctfassets.net/0jkr5d02o14t/krUFgCJtyCytEk5Z5vVNa/04657b426176e7c788a8da19ca8922e0/inner_ellipsis.png?h=250";
-const outer_ellipsis =
-  "https://images.ctfassets.net/0jkr5d02o14t/6I9fl3iJbrPtzXK9cdMNfc/f3c907dbf54399eea6719da51a80765f/outer_ellpisis.png?h=250";
-
+const inner_ellipsis = process.env.inner_ellipsis;
+const outer_ellipsis = process.env.outer_ellipsis;
 interface LoginFormProps {
   history: any;
 }
